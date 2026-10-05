@@ -55,7 +55,7 @@ Row 2 needs about 220 DIP, so the *Column width* setting goes from 220 to
 5. Height: Small / Medium / Large
 6. New note (disabled in Single mode)
 7. Delete note
-8. About Easy Notes (creator, MIT license and LinkedIn link)
+8. About Easy Notes (creator and MIT license)
 
 Right-clicking the title bar or the tool strip opens the same menu.
 
@@ -3795,7 +3795,6 @@ enum : UINT {
     IDM_COLOR_FOLLOW = 301,
 };
 
-constexpr wchar_t kAboutUrl[] = L"https://www.linkedin.com/in/setatheluo";
 
 // Turns every non-empty line into a checkbox, or, if they all are already,
 // back into plain text.
@@ -3824,14 +3823,10 @@ static void SetMode(bool multiple) {
 }
 
 static void ShowAbout(Note* n) {
-    std::wstring text =
-        L"Easy Notes\n\nCreated by Torsion\nLicensed under the MIT License\n\n";
-    text += kAboutUrl;
-    text += L"\n\nOpen the LinkedIn page?";
-    int r = MessageBoxW(n->hwnd, text.c_str(), L"About Easy Notes",
-                        MB_YESNO | MB_ICONINFORMATION | MB_DEFBUTTON2);
+    int r = MessageBoxW(n->hwnd,
+                        L"Easy Notes\n\nCreated by Torsion\nLicensed under the MIT License",
+                        L"About Easy Notes", MB_OK | MB_ICONINFORMATION);
     if (r == 0) Wh_Log(L"MessageBoxW(About) failed, error %u", GetLastError());
-    if (r == IDYES && !g_quitting) OpenUrl(kAboutUrl);
 }
 
 static void ConfirmDelete(Note* n) {
