@@ -313,7 +313,7 @@ Licensed under the MIT License.
   - custom: Custom (hex code below)
 - customColor: "#FFE8A3"
   $name: Custom color (hex code)
-  $description: Any color as a hex code, for example #FFE8A3, #3A7BD5 or #38F. Used for new notes when the default color is Custom, and available to every note from right-click > Color > Custom.
+  $description: "Any color as a hex code, for example #FFE8A3, #3A7BD5 or #38F. Used for new notes when the default color is Custom, and available to every note from the Color circle > Custom (hex from settings)."
 - fontSize: 10
   $name: Font size
   $description: Note text size in points. Range 7-24.
