@@ -1,6 +1,6 @@
 // ==WindhawkMod==
-// @id              desktop-sticky-notes-fork
-// @name            Easy Notes - Fork
+// @id              desktop-sticky-notes
+// @name            Easy Notes
 // @description     Sticky notes that live on the desktop, with checklists, clickable links, auto-numbering and a snapping column grid
 // @version         1.0.0
 // @author          Torsion
